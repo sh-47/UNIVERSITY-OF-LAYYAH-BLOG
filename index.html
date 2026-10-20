@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Layyah | Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="home">
+        <a href="#home" class="brand">
+            <img src="LOGO 6.jpg" alt="University of Layyah Blog logo"
+                 class="logo">
+            <div>
+                <h1>University of Layyah</h1>
+                <p>Knowledge • Innovation • Excellence</p>
+            </div>
+        </a>
+
+        <button id="menuToggle" class="menu-toggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="mainNav">
+            <a href="#home">Home</a>
+            <a href="#blogs">Blogs</a>
+            <a href="#campus">Campus</a>
+            <a href="#library">Library</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- MAIN CAMPUS IMAGE -->
+        <section class="hero">
+            <div class="hero-text">
+                <span class="eyebrow">WELCOME TO OUR UNIVERSITY BLOG</span>
+                <h2>Learn More.<br><span>Dream Bigger.</span></h2>
+                <p>
+                    Explore educational articles, technology,
+                    student experiences and university activities
+                    in one place.
+                </p>
+                <a class="btn" href="#blogs">Explore Blogs →</a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="uni img.jpg"
+                    alt="University campus building">
+                <div class="image-label">
+                    University Life • Learning • Growth
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOGS -->
+        <section class="section" id="blogs">
+            <div class="section-title">
+                <div>
+                    <span class="eyebrow">LATEST STORIES</span>
+                    <h2>Explore Our Blogs</h2>
+                    <p>Read, learn and share ideas with our community.</p>
+                </div>
+                <span class="counter" id="postCount">0 posts</span>
+            </div>
+
+            <div class="toolbar">
+                <input type="search" id="searchInput"
+                       placeholder="Search blog posts..."
+                       aria-label="Search blog posts">
+
+                <select id="categoryFilter" aria-label="Filter category">
+                    <option value="All">All Categories</option>
+                    <option value="Education">Education</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Campus Life">Campus Life</option>
+                    <option value="Events">Events</option>
+                </select>
+            </div>
+
+            <div id="blogGrid" class="blog-grid"></div>
+            <p id="emptyMessage" class="empty-message" hidden>
+                No posts found. Try a different search.
+            </p>
+        </section>
+
+        <!-- CAMPUS FEATURE -->
+        <section class="campus" id="campus">
+            <div class="campus-image">
+                <img
+                    src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1100&q=85"
+                    alt="University campus with academic buildings"
+                    loading="lazy">
+            </div>
+
+            <div class="campus-text">
+                <span class="eyebrow">OUR CAMPUS</span>
+                <h2>A Place to Learn and Grow</h2>
+                <p>
+                    University life is an opportunity to develop
+                    skills, discover interests, make friends and
+                    prepare for future careers.
+                </p>
+                <a href="#blogs" class="text-link">Read student stories →</a>
+            </div>
+        </section>
+
+        <!-- LIBRARY IMAGE -->
+        <section class="section library-section" id="library">
+            <div class="section-title">
+                <div>
+                    <span class="eyebrow">READ • RESEARCH • DISCOVER</span>
+                    <h2>University Library</h2>
+                    <p>A space for reading, research and new ideas.</p>
+                </div>
+            </div>
+
+            <div class="library-card">
+                <img
+                    src="library.jpg"
+                    alt="Library interior with bookshelves and study space"
+                    loading="lazy">
+
+                <div class="library-caption">
+                    <h3>Knowledge Opens Doors</h3>
+                    <p>Read more. Learn more. Achieve more.</p>
+                </div>
+            </div>
+
+            <div class="resource-grid">
+                <article class="resource-card">
+                    <h3>📚 Reading</h3>
+                    <p>Develop a daily reading habit and expand your knowledge.</p>
+                </article>
+                <article class="resource-card">
+                    <h3>💻 Technology</h3>
+                    <p>Explore digital learning tools and computer skills.</p>
+                </article>
+                <article class="resource-card">
+                    <h3>🎯 Study Tips</h3>
+                    <p>Plan your time, revise regularly and set clear goals.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ADD BLOG FORM -->
+        <section class="publish-section" id="publish">
+            <div>
+                <span class="eyebrow">SHARE YOUR IDEAS</span>
+                <h2>Publish a Blog Post</h2>
+                <p>Share an educational article or student experience.</p>
+            </div>
+
+            <form id="blogForm">
+                <label for="blogTitle">Blog Title</label>
+                <input id="blogTitle" type="text"
+                       placeholder="Enter blog title"
+                       maxlength="100" required>
+
+                <label for="blogCategory">Category</label>
+                <select id="blogCategory" required>
+                    <option value="Education">Education</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Campus Life">Campus Life</option>
+                    <option value="Events">Events</option>
+                </select>
+
+                <label for="blogAuthor">Author Name</label>
+                <input id="blogAuthor" type="text"
+                       placeholder="Enter your name"
+                       maxlength="60" required>
+
+                <label for="blogContent">Blog Content</label>
+                <textarea id="blogContent" rows="5"
+                          placeholder="Write your article..."
+                          maxlength="3000" required></textarea>
+
+                <button class="btn" type="submit">Publish Blog +</button>
+                <p id="formMessage" role="status"></p>
+            </form>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <img src="LOGO 6.jpg" alt="University blog logo" class="about-logo">
+            <span class="eyebrow">ABOUT THIS PROJECT</span>
+            <h2>University of Layyah Blog</h2>
+            <p>
+                This student project uses HTML, CSS and JavaScript
+                to demonstrate a university blog with articles,
+                search, categories, browser-based saving and responsive design.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            <img src="LOGO 6.jpg" alt="" class="footer-logo">
+            <div>
+                <h3>University of Layyah Blog</h3>
+                <p>Knowledge • Innovation • Excellence</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#blogs">Blogs</a>
+            <a href="#campus">Campus</a>
+            <a href="#library">Library</a>
+        </div>
+
+        <p class="copyright">
+            © <span id="year"></span> University of Layyah Blog.
+            Student project.
+        </p>
+    </footer>
+
+</body>
+</html>
